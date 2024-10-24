@@ -1,5 +1,5 @@
 document.getElementById('clienteForm').addEventListener('submit', async function(e) {
-    e.preventDefault(); // Evita o reload da página
+    e.preventDefault(); 
   
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
@@ -37,7 +37,7 @@ document.getElementById('clienteForm').addEventListener('submit', async function
       const resultado = await resposta.json();
   
       if (resposta.ok) {
-        window.location.href = "http://localhost:3000/clientes/lista"; // redireciona para a página de lista de clientes
+        window.location.href = "http://localhost:3000/clientes/lista"; 
       } else {
         document.getElementById('mensagem').innerText = 'Erro ao criar cliente: ' + resultado.mensagem;
       }

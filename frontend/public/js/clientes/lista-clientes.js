@@ -12,6 +12,15 @@ async function fetchClientes() {
             row.insertCell(2).innerText = cliente.cpf;
             row.insertCell(3).innerText = cliente.tel;
             row.insertCell(4).innerText = `${cliente.endereco.rua}, ${cliente.endereco.numero} - ${cliente.endereco.cidade}, ${cliente.endereco.estado} - ${cliente.endereco.cep}`;
+            
+            const actionsCell = row.insertCell(5);
+            const editButton = document.createElement('button'); 
+            editButton.innerText = 'Editar';
+            editButton.className = 'editar-btn';
+            editButton.onclick = () => {
+                window.location.href = `http://localhost:3000/clientes/editar/${cliente._id}`;
+            };
+            actionsCell.appendChild(editButton);
         });
     } catch (error) {
         console.error('Erro:', error);

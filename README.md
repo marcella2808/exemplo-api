@@ -1,6 +1,6 @@
-# Exemplo de API 
+# Modelo de aplicação full-stack
 
-Este projeto é um modelo de API desenvolvido para servir como base para futuras aplicações. Ele fornece uma estrutura inicial para operações CRUD com integração ao MongoDB, utilizando Node.js e Express.
+Este projeto é um modelo de aplicação focado na criação de uma API e desenvolvido para servir como base para futuras aplicações. Ele inclui operações CRUD com integração ao MongoDB no backend, utilizando Node.js e Express, além de uma interface frontend para interação com o usuário.
 
 ## Índice
 
@@ -35,3 +35,4 @@ CMD
 ```cmd
 copy env.example .env
 ```
+## Uso

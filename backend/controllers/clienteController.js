@@ -2,11 +2,11 @@ const path = require("path");
 const Cliente = require("../models/Cliente.js");
 
 exports.getCadastroCliente = async (req, res) => {
-    res.sendFile(path.join(__dirname, "../..", "frontend", "public", "html", "cadastro-cliente.html")); // Envie o arquivo index.html
+    res.sendFile(path.join(__dirname, "../..", "frontend", "public", "html", "clientes", "cadastro-cliente.html")); // Envie o arquivo index.html
 };
 
 exports.getListaClientes = async (req, res) => {
-    res.sendFile(path.join(__dirname, "../..", "frontend", "public", "html", "lista-clientes.html"))
+    res.sendFile(path.join(__dirname, "../..", "frontend", "public", "html", "clientes", "lista-clientes.html"))
 }
 
 exports.getClientes = async (req, res) => {

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const params = new URLSearchParams(window.location.search);
     const id = window.location.pathname.split('/').pop();
 
     const response = await fetch(`http://localhost:3000/clientes/get/${id}`);

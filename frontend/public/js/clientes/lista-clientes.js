@@ -21,6 +21,22 @@ async function fetchClientes() {
                 window.location.href = `http://localhost:3000/clientes/editar/${cliente._id}`;
             };
             actionsCell.appendChild(editButton);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.innerText = 'Deletar';
+            deleteButton.classList.add('deletar-btn'); 
+            deleteButton.onclick = async () => {
+                const confirmDelete = confirm("Tem certeza que deseja deletar este cliente?");
+                if (confirmDelete) {
+                    await fetch(`http://localhost:3000/clientes/delete/${cliente._id}`, {
+                        method: 'DELETE',
+                    });
+                    if (response.ok) {
+                        window.location.reload(); 
+                    }
+                }
+            };
+            actionsCell.appendChild(deleteButton);
         });
     } catch (error) {
         console.error('Erro:', error);

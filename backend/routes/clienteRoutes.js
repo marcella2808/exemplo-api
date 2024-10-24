@@ -6,7 +6,8 @@ const {
     getClienteById,
     getClientes,
     createCliente,
-    updateCliente
+    updateCliente,
+    deleteCliente
 } = require("../controllers/clienteController"); 
 
 const router = express.Router();
@@ -19,5 +20,6 @@ router.get("/get", getClientes);
 router.get("/get/:id", getClienteById);
 router.post("/post", createCliente); 
 router.put("/update/:id", updateCliente);
+router.delete("/delete/:id", deleteCliente);
 
 module.exports = router;

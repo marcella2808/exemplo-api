@@ -61,3 +61,22 @@ table, th, td {
 .editar-btn:hover {
     background-color: #45a049; 
 }
+
+.deletar-btn {
+    background-color: #dc3545; /* Vermelho */
+    color: white;       
+    border: none;    
+    padding: 5px 10px;       
+    text-align: center;       
+    text-decoration: none;
+    display: inline-block;     
+    font-size: 16px;       
+    margin: 4px 2px;         
+    cursor: pointer;           
+    border-radius: 5px;       
+    transition: background-color 0.3s; 
+}
+
+.deletar-btn:hover {
+    background-color: #c82333; /* Vermelho mais escuro */
+}

@@ -1,16 +1,16 @@
-const path = require("path"); 
+const path = require("path");
 const Cliente = require("../models/Cliente.js");
 
 exports.getCadastroCliente = async (req, res) => {
-    res.sendFile(path.join(__dirname, "../..", "frontend", "public", "html", "clientes", "cadastro-cliente.html")); // Envie o arquivo index.html
+    res.sendFile(path.join(__dirname,"../../frontend/public/html/clientes/cadastro-cliente.html"));
 };
 
 exports.getListaClientes = async (req, res) => {
-    res.sendFile(path.join(__dirname, "../..", "frontend", "public", "html", "clientes", "lista-clientes.html"))
+    res.sendFile(path.join(__dirname,"../../frontend/public/html/clientes/lista-clientes.html"));
 };
 
-exports.getEditarCliente = async(req, res) => {
-    res.sendFile(path.join(__dirname, "../..", "frontend", "public", "html", "clientes", "editar-cliente.html"))
+exports.getEditarCliente = async (req, res) => {
+    res.sendFile(path.join(__dirname,"../../frontend/public/html/clientes/editar-cliente.html"));
 };
 
 exports.getClienteById = async (req, res) => {
@@ -40,16 +40,19 @@ exports.createCliente = async (req, res) => {
         const cliente = req.body;
         const newCliente = await Cliente.create(cliente);
         return res.status(201).json(newCliente);
-    } catch(e) {
+    } catch (e) {
         return res.status(500).json({ message: "Erro ao cadastrar cliente.", error: e });
     }
 };
 
 exports.updateCliente = async (req, res) => {
     const { id } = req.params;
-    const updates = req.body; 
+    const updates = req.body;
     try {
-        const updatedCliente = await Cliente.findByIdAndUpdate(id, updates, { new: true, runValidators: true });
+        const updatedCliente = await Cliente.findByIdAndUpdate(id, updates, {
+            new: true,
+            runValidators: true,
+        });
         if (!updatedCliente) {
             return res.status(404).json({ message: "Cliente não encontrado." });
         }

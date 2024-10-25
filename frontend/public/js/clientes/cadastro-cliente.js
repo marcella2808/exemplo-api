@@ -1,15 +1,15 @@
-document.getElementById('clienteForm').addEventListener('submit', async function(e) {
+document.getElementById("clienteForm").addEventListener("submit", async function(e) {
     e.preventDefault(); 
   
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const cpf = document.getElementById('cpf').value;
-    const tel = document.getElementById('tel').value;
-    const rua = document.getElementById('rua').value;
-    const numero = document.getElementById('numero').value;
-    const cidade = document.getElementById('cidade').value;
-    const estado = document.getElementById('estado').value;
-    const cep = document.getElementById('cep').value;
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const cpf = document.getElementById("cpf").value;
+    const tel = document.getElementById("tel").value;
+    const rua = document.getElementById("rua").value;
+    const numero = document.getElementById("numero").value;
+    const cidade = document.getElementById("cidade").value;
+    const estado = document.getElementById("estado").value;
+    const cep = document.getElementById("cep").value;
   
     const clienteData = {
       nome: nome,
@@ -26,10 +26,10 @@ document.getElementById('clienteForm').addEventListener('submit', async function
     };
   
     try {
-      const resposta = await fetch('http://localhost:3000/clientes/post', {
-        method: 'POST',
+      const resposta = await fetch("http://localhost:3000/clientes/post", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(clienteData)
       });
@@ -39,11 +39,11 @@ document.getElementById('clienteForm').addEventListener('submit', async function
       if (resposta.ok) {
         window.location.href = "http://localhost:3000/clientes/lista"; 
       } else {
-        document.getElementById('mensagem').innerText = 'Erro ao criar cliente: ' + resultado.mensagem;
+        document.getElementById("mensagem").innerText = "Erro ao criar cliente: " + resultado.mensagem;
       }
     } catch (err) {
-      console.error('Erro:', err);
-      document.getElementById('mensagem').innerText = 'Erro ao conectar ao servidor';
+      console.error("Erro:", err);
+      document.getElementById("mensagem").innerText = "Erro ao conectar ao servidor";
     }
   });
   

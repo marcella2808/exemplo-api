@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 const mongoose = require("mongoose");
 const DB_URI = process.env.DB_URI;
 
@@ -9,7 +9,7 @@ const testConnection = async () => {
     } catch (error) {
         console.error("Erro ao conectar ao MongoDB:", error);
     } finally {
-        mongoose.connection.close(); 
+        mongoose.connection.close();
     }
 };
 

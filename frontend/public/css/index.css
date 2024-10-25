@@ -1,8 +1,8 @@
-@import url(../css/default.css);
+@import url("../css/default.css");
 body {
     background-color: #f0f0f5;
     color: #444;
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -10,11 +10,11 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 main {
-    flex-grow: 1; 
+    flex-grow: 1;
     padding: 40px;
     margin: 0 auto;
 }
@@ -40,10 +40,10 @@ button {
     border: none;
     padding: 2rem;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
 }
 
-button:hover{
+button:hover {
     scale: 1.2;
 }
 

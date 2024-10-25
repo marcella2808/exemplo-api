@@ -32,7 +32,7 @@ cp env.example .env
 ```
 Windows
 ```powershell
-Copy-Item .\env.example .\.env
+Copy-Item .env.example .env
 ```
 CMD
 ```cmd

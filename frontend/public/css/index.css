@@ -1,107 +1,62 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+@import url(../css/default.css);
 body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #333;
-    padding: 15px 0;
-}
-
-header nav ul {
-    list-style: none;
+    background-color: #f0f0f5;
+    color: #444;
+    height: 100vh; 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #f4f4f4;
-    text-decoration: underline;
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
 }
 
 main {
-    padding: 20px;
-    max-width: 1200px;
+    flex-grow: 1; 
+    padding: 40px;
     margin: 0 auto;
 }
 
-.intro {
+main h1 {
+    margin-top: 2rem;
     text-align: center;
-    margin-bottom: 30px;
-}
-
-.intro h1 {
     font-size: 36px;
-    margin-bottom: 10px;
-    color: #333;
+    color: #2b2b2b;
 }
 
-.intro p {
-    font-size: 18px;
-    color: #666;
+main > div {
+    display: flex;
+    height: 55%;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.features {
-    background-color: white;
-    padding: 20px;
+button {
+    width: 37%;
+    font-weight: 600;
+    font-size: 22px;
+    border: none;
+    padding: 2rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:hover{
+    scale: 1.2;
+}
+
+.cadastro-btn {
+    background-color: #1b319c;
+    color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.features h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.features ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.features ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.features ul li:before {
-    content: "✔";
-    color: #6DA55F;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
-    margin-top: 30px;
-}
-
-footer p {
-    font-size: 16px;
+.lista-btn {
+    background-color: #fff;
+    color: rgb(77, 77, 77);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

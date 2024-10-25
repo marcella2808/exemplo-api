@@ -1,66 +1,67 @@
+@import url("../default.css");
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #fff;
     margin: 0;
     padding: 20px;
-  }
-  
-  h2 {
+}
+
+h1 {
+    margin: 1rem 0;
     text-align: center;
     color: #333;
-  }
-  
-  form {
+}
+
+h3 {
+    margin: .75rem 0 .5rem;
+    color: #333;
+}
+
+form {
     background-color: #fff;
     max-width: 500px;
     margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  label {
+    padding: 1rem;
+}
+
+label {
     display: block;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 5px;
     color: #333;
-  }
-  
-  input[type="text"], input[type="email"] {
+}
+
+input {
     width: 100%;
-    padding: 8px;
+    padding: 6px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    background-color: #f3f3f3;
+}
+
+button {
     width: 100%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: rgb(27 156 41);
     color: #fff;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
-  h3 {
-    margin-top: 20px;
-    color: #333;
-  }
-  
-  p#mensagem {
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: rgb(22, 122, 33);
+}
+
+p#mensagem {
     text-align: center;
     color: red;
     font-weight: bold;
-  }
-  
+}

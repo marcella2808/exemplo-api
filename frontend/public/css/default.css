@@ -46,7 +46,7 @@ input {
     background-color: #f3f3f3;
 }
 
-input:focus {
+input, select:focus {
     outline: none;
 }
 

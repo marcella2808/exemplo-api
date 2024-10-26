@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Cria os schemas para endereço e cliente
 const enderecoSchema = new mongoose.Schema({
     rua: { type: String, required: true },
     numero: { type: String, required: true },
@@ -17,4 +18,5 @@ const clienteSchema = new mongoose.Schema({
     dataCriacao: { type: Date, default: Date.now(), immutable: true },
 });
 
-module.exports = mongoose.model("Cliente", clienteSchema);
+// Cria e exporta o model de cliente
+module.exports = mongoose.model("Cliente", clienteSchema); 

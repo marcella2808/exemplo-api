@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const id = window.location.pathname.split("/").pop();
+    // Obtém o id do cliente pela URL
+    const id = window.location.pathname.split("/").pop(); 
 
+    // Busca o cliente e exibe os dados nos campos
     const response = await fetch(`http://localhost:3000/clientes/get/${id}`);
     const cliente = await response.json();
 
@@ -15,6 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("estado").value = cliente.endereco.estado;
     document.getElementById("cep").value = cliente.endereco.cep;
 
+    // Envia os novos dados
     document.getElementById("editarClienteForm").addEventListener("submit", async (e) => {
         e.preventDefault();
 
@@ -33,12 +36,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         };
 
         try {
+            // Faz uma requisição PUT
             const response = await fetch(`http://localhost:3000/clientes/update/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(updatedCliente),
+            body: JSON.stringify(updatedCliente)
         });
         
         const result = await response.json();

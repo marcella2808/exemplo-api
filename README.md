@@ -46,7 +46,7 @@ npm start
 ```
 ### Acessar a URL no navegador
 ```txt
-http://localhost:3000
+http://localhost:3000/inicio
 ```
 ## Endpoints
 

@@ -50,6 +50,7 @@ http://localhost:3000
 ```
 ## Endpoints
 
+### Operações CRUD (backend)
 | MÉTODO | LINK | DESCRIÇÃO |
 |-----|------|-----------|
 | GET | http://localhost:3000/clientes/get | Obtém os dados de todos os clientes  |
@@ -58,6 +59,7 @@ http://localhost:3000
 | PUT| http://localhost:3000/clientes/update/{id} | Atualiza os dados de um cliente existente |
 | DELETE | http://localhost:3000/clientes/delete/{id} | Deleta os dados de um cliente específico (identificado pelo id) |
 
+### Páginas HTML (frontend)
 | MÉTODO | LINK                                          | DESCRIÇÃO                                   |
 |--------|----------------------------------------------|---------------------------------------------|
 | GET    | http://localhost:3000/inicio     | Serve a página inicial      |

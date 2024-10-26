@@ -1,4 +1,4 @@
-async function fetchClientes() {
+document.addEventListener("DOMContentLoaded", async () => {
     try {
         const response = await fetch("http://localhost:3000/clientes/get");
         const clientes = await response.json();
@@ -45,6 +45,8 @@ async function fetchClientes() {
     } catch (error) {
         console.error("Erro:", error);
     }
-}
+});
 
-fetchClientes();
+document.getElementById("back-btn").onclick = () => {
+    window.location.href = "http://localhost:3000/inicio";
+}

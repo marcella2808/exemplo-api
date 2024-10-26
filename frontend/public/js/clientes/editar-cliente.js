@@ -57,3 +57,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 });
+
+document.getElementById("cancel-btn").onclick = () => {
+    window.location.href = "http://localhost:3000/clientes/lista";
+}

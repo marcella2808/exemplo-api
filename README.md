@@ -16,7 +16,7 @@ Instruções para que os usuários possam instalar e rodar o projeto localmente.
 
 ### Clonar o repositório
 ```bash
-git clone https://github.com/marcella2808/exemplo-api.git
+git clone https://github.com/marcella2808/gerenciamento-de-clientes.git
 ```
 ### Entrar no diretório /backend
 ```bash

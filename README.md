@@ -60,6 +60,7 @@ http://localhost:3000
 
 | MÉTODO | LINK                                          | DESCRIÇÃO                                   |
 |--------|----------------------------------------------|---------------------------------------------|
+| GET    | http://localhost:3000/inicio     | Serve a página inicial      |
 | GET    | http://localhost:3000/clientes/cadastro     | Serve a página de cadastro de clientes      |
 | GET    | http://localhost:3000/clientes/lista        | Serve a página de listagem de clientes      |
 | GET    | http://localhost:3000/clientes/editar/{id}  | Serve a página de edição de cliente         |

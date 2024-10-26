@@ -1,49 +1,39 @@
 document.getElementById("clienteForm").addEventListener("submit", async function(e) {
     e.preventDefault(); 
   
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const cpf = document.getElementById("cpf").value;
-    const tel = document.getElementById("tel").value;
-    const rua = document.getElementById("rua").value;
-    const numero = document.getElementById("numero").value;
-    const cidade = document.getElementById("cidade").value;
-    const estado = document.getElementById("estado").value;
-    const cep = document.getElementById("cep").value;
-  
     const clienteData = {
-      nome: nome,
-      email: email,
-      cpf: cpf,
-      tel: tel,
+      nome: document.getElementById("nome").value,
+      email: document.getElementById("email").value,
+      cpf: document.getElementById("cpf").value,
+      tel: document.getElementById("tel").value,
       endereco: {
-        rua: rua,
-        numero: numero,
-        cidade: cidade,
-        estado: estado,
-        cep: cep
+          rua: document.getElementById("rua").value,
+          numero: document.getElementById("numero").value,
+          cidade: document.getElementById("cidade").value,
+          estado: document.getElementById("estado").value,
+          cep: document.getElementById("cep").value,
       }
-    };
-  
-    try {
-      const resposta = await fetch("http://localhost:3000/clientes/post", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(clienteData)
-      });
-  
-      const resultado = await resposta.json();
-  
-      if (resposta.ok) {
-        window.location.href = "http://localhost:3000/clientes/lista"; 
-      } else {
-        document.getElementById("mensagem").innerText = "Erro ao criar cliente: " + resultado.mensagem;
-      }
-    } catch (err) {
-      console.error("Erro:", err);
-      document.getElementById("mensagem").innerText = "Erro ao conectar ao servidor";
+  };
+
+  try {
+    const response = await fetch("http://localhost:3000/clientes/post", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(clienteData)
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      window.location.href = "http://localhost:3000/clientes/lista"; 
+    } else {
+      document.getElementById("mensagem-erro").innerText = result.message;
     }
-  });
+  } catch (err) {
+    console.error("Erro:", err);
+    document.getElementById("mensagem-erro").innerText = "Erro ao conectar ao servidor";
+  }
+});
   

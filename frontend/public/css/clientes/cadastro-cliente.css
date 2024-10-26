@@ -60,8 +60,3 @@ button:hover {
     background-color: rgb(22, 122, 33);
 }
 
-p#mensagem {
-    text-align: center;
-    color: red;
-    font-weight: bold;
-}

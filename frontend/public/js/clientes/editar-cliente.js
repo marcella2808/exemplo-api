@@ -32,14 +32,24 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         };
 
-        await fetch(`http://localhost:3000/clientes/update/${id}`, {
+        try {
+            const response = await fetch(`http://localhost:3000/clientes/update/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(updatedCliente),
         });
-
-        window.location.href = "http://localhost:3000/clientes/lista"; 
+        
+        const result = await response.json();
+        if (response.ok) {
+            window.location.href = "http://localhost:3000/clientes/lista";   
+        } else {
+            document.getElementById("mensagem-erro").innerText = result.message;
+        }
+        } catch(err) {
+            console.error("Erro:", err);
+            document.getElementById("mensagem-erro").innerText = "Erro ao conectar ao servidor";
+        }
     });
 });

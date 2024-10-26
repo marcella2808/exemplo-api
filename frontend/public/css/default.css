@@ -9,3 +9,15 @@
 input:focus {
     outline: none;
 }
+
+p#mensagem-erro {
+    text-align: center;
+    color: #be1f1f;
+    font-weight: bold;
+}
+
+span.small-txt {
+    color: #6e6e6e;
+    font-size: 12px;
+    font-weight: 500;
+}

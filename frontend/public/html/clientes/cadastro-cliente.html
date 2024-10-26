@@ -43,6 +43,7 @@
       <div>
         <label for="estado">Estado:</label>
         <select name="estado" id="estado" required>
+          <option value="">Selecionar</option>
           <option value="AC">AC</option>
           <option value="AL">AL</option>
           <option value="AP">AP</option>
@@ -77,6 +78,7 @@
     <input type="text" id="cep" name="cep" required>
 
     <button type="submit" class="green-btn">Cadastrar</button>
+    <button type="button" class="red-btn" id="cancel-btn">Cancelar</button>
   </form>
 
   <p id="mensagem-erro"></p>

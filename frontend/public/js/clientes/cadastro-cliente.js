@@ -37,3 +37,6 @@ document.getElementById("clienteForm").addEventListener("submit", async function
   }
 });
   
+document.getElementById("cancel-btn").onclick = () => {
+  window.location.href = "http://localhost:3000/inicio";
+}

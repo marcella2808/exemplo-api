@@ -14,6 +14,10 @@ select {
     cursor: pointer;
 }
 
-button:hover {
+.green-btn:hover {
     background-color: rgb(22, 122, 33);
+}
+
+.red-btn:hover {
+    background-color: #9b1919;
 }
